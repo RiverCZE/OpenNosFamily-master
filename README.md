@@ -1,62 +1,61 @@
-[![discord](https://img.shields.io/badge/discord-OpenNos-blue.svg?style=flat)](https://discord.gg/N8eqPUh)
-
-#Instructions to contribute#
+#Instrucciones para contribuir #
 
 
-##Disclaimer##
-This project is a community project not for commercial use. The emulator itself is proof of concept of our idea to try out anything what's not possible on original servers. The result is to learn and program together for prove the study. 
+##Renuncia##
+Este proyecto es un proyecto comunitario no para uso comercial. El emulador en sí es una prueba del concepto de nuestra idea de probar cualquier cosa que no sea posible en los servidores originales. El resultado es aprender y programar juntos para probar el estudio.
 
 ##Legal##
 
-This Website and Project is in no way affiliated with, authorized, maintained, sponsored or endorsed by Gameforge or any of its affiliates or subsidiaries. This is an independent and unofficial server for educational use ONLY. Using the Project might be against the TOS.
+Este Sitio Web y el Proyecto no están de ninguna manera afiliados, autorizados, mantenidos, patrocinados o endosados ​​por Gameforge o cualquiera de sus filiales o subsidiarias. Este es un servidor independiente y no oficial para uso educativo SOLAMENTE. El uso del Proyecto podría estar en contra de los TOS.
 
-#Attention!#
-This emulation software is not open source to host any private servers. It is open source to work together community-based.
+#¡Atención!#
+Este software de emulación no es de código abierto para alojar servidores privados. Es de código abierto para trabajar juntos en la comunidad.
 
-We do not provide any modified client files. The alorithms are based on our logic.
+No proporcionamos ningún archivo de cliente modificado. Los algoritmos se basan en nuestra lógica.
 
-##Before creating issue, you can contact us on Discord.##
+## Antes de crear un problema, puede ponerse en contacto con nosotros en Discord.
+Https://discordapp.com/invite/qdPMDv5
 
-##Special Information for Hamachii and VPN Users##
-If you want to use the Servers you need to Modify the Program.cs of both OpenNos.Login and OpenNos.World and rebuild the code.
-- Change "127.0.0.1" to "HamachiIp" (Eg. "12.34.567.89")
-- Dont forget to Modify the app.config of the Login-Server to the correct redirection (<server Name="S1-OpenNos" WorldPort="1337" WorldIp="25.71.84.227" channelAmount="1" />)
+## Información Especial para Usuarios de Hamachii y VPN ##
+Si desea utilizar los servidores que necesita para modificar el Program.cs de OpenNos.Login y OpenNos.World y reconstruir el código.
+- Cambiar "127.0.0.1" a "HamachiIp" (Ej. "12.34.567.89")
+- No olvide modificar el app.config del servidor de inicio de sesión en el redireccionamiento correcto (<server Name = "S1-OpenNos" WorldPort = "1337" WorldIp = "25.71.84.227" channelAmount = "1" />)
 
-###Contribution is only possible with Visual Studio 2015 (Community or other editions) and MySQL. and [StyleCop extension](https://stylecop.codeplex.com/)###
-#NOTE BEFORE INSTALL#
-- Error listen point : - This is WCF error install it or run opennos on visual studio
-- What're the commands? : $Help
-- Can we have your packet.txt : No! parse them yourself just sniff them!
-- Can we have other files for parser? : Yes, simply by extracting them from your client : nslangdata.dat, nsgtddata.dat, nstcdata.dat
-- On login nothing happen : verify you can connect with telnet on the correct port "telnet 127.0.0.1 80". if yes you're not on the correct port of your client. If not, you installed something wrong, check if you have disabled any programs working on port 80(eg.skype).
-- If issue still hasnt been fixed look inside our troubleshooting file.
-- Password is not recognized : verify that your password is hash in sha512 and that your launcher(made it yourself) is done with the most recent nostaleX.dat
-- Monsters don't move : parse mv packets.
-- Recipe don't work : parse each recipe by click on them for packets.
-- The emulator closes after a few seconds : Please check if port 80 is not already in use (eg.skype...)
+###Contribution is only possible with Visual Studio 2015 (Community or other editions), Microsoft SQL Server 2016, [StyleCop extension](https://stylecop.codeplex.com/) and [ResX Resource Manager](https://resxresourcemanager.codeplex.com/)###
+#NOTA ANTES DE INSTALAR #
+- Error escuchar punto: - Esto es error de WCF instalarlo o ejecutar opennos en Visual Studio
+- żCuáles son los comandos? : $ Help
+- ¿Podemos tener su paquete.txt: No! Analizarlos usted mismo sólo olfatearlos!
+- ¿Podemos tener otros archivos para analizador? : Sí, simplemente extrayendo de su cliente: nslangdata.dat, nsgtddata.dat, nstcdata.dat
+- En el inicio de sesión no sucede nada: verificar que puede conectarse con telnet en el puerto correcto "telnet 127.0.0.1 80". Si es que no está en el puerto correcto de su cliente. Si no, ha instalado algo incorrecto, compruebe si ha desactivado cualquier programa que funcione en el puerto 80 (por ejemplo, skype).
+- Si todavía no se ha solucionado el problema, busque dentro de nuestro archivo de solución de problemas.
+- No se reconoce la contraseña: compruebe que su contraseña es hash en sha512 y que su lanzador (hecho por usted mismo) se hace con el nostaleX.dat más reciente
+- Los monstruos no se mueven: analizar los paquetes mv.
+- La receta no funciona: analiza cada receta haciendo clic en ellos para los paquetes.
+- El emulador se cierra después de unos segundos: Compruebe si el puerto 80 ya no está en uso (por ejemplo, skype ...)
 
-##1 Install SSDT For VS##
-http://go.microsoft.com/fwlink/?LinkID=393520&clcid=0x409
+## 1 Instale SSDT para VS ##
+Http://go.microsoft.com/fwlink/?LinkID=393520&clcid=0x409
 
-##2 Install MySQL Installer (Just navigate thru Installer)##
-http://dev.mysql.com/downloads/windows/installer/
+## 2 Instale el instalador de MySQL (solo navegue a través del instalador) ##
+Http://dev.mysql.com/downloads/windows/installer/
 
-Installer Packages:
-- Custom Installation
-  - MySQL Server x64 (Database Server)
-  - MySQL Workbench x64 (Data Edtiting)
-  - MySQL Notifier x86 (Taskbar Icon Status)
-  - MySQL for Visual Studio x86
-  - Connector/NET x86 (according to our test theres a issue with 6.9.9 version please use [6.9.8 instead](https://downloads.mysql.com/archives/get/file/mysql-connector-net-6.9.8.msi))
-  
-- Port: 3306
-- User: test
-- Password: test
+Paquetes del instalador:
+- Instalación personalizada
+  - Servidor MySQL x64 (Servidor de base de datos)
+  - MySQL Workbench x64 (edición de datos)
+  - MySQL Notifier x86 (Estado de Icono de la Barra de Tareas)
+  - MySQL para Visual Studio x86
+  - Conector / NET x86 (de acuerdo a nuestra prueba theres un problema con la versión 6.9.9 por favor, utilice [6.9.8 en su lugar] (https://downloads.mysql.com/archives/get/file/mysql-connector-net-6.9 .8msi))
+  
+- Puerto: 3306
+- Usuario: test
+- Contraseña: test
 
-##3 Install MYSQL for Visual Studio##
+## 3 Instalar MYSQL para Visual Studio ##
 
-##4 Use the NuGet Package Manager to Update the Database##
+## 4 Utilice NuGet Package Manager para actualizar la base de datos ##
 
-- Go to Tools -> NuGet Package Manager -> Package Manager Console
-- Choose Project OpenNos.DAL.EF.MySQL
-- Type 'update-database' and update the Database
+- Ir a Herramientas -> NuGet Package Manager -> Consola del gestor de paquetes
+- Elija Proyecto OpenNos.DAL.EF.MySQL
+- Escriba 'update-database' y actualice la base de datos
